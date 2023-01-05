@@ -1,8 +1,43 @@
+:root {
+  --first-color: #6ffff3;
+  --second-color: #e4d2ff;
+  --third-color: #ff128c;
+  --bg-color: #feefe5;
+  --font-color: #3a015c;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
 .tff-logo {
   width: 120px;
 }
 
-.header-img {
+.header-cover {
   position: absolute;
+  top: 60px;
   width: 100%;
+}
+
+.main-h1 {
+  font-family: "Fredoka One", cursive;
+  color: var(--third-color);
+  font-size: 80px;
+  position: relative;
+  left: 70px;
+  top: 120px;
+  text-shadow: -2px 2px black;
+  text-transform: capitalize;
+  width: 50%;
+}
+
+.main-h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--font-color);
+  font-size: 30px;
+  position: relative;
+  left: 70px;
+  top: 160px;
+  width: 45%;
 }
