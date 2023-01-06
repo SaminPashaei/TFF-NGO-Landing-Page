@@ -1,22 +1,44 @@
 :root {
-  --first-color: #6ffff3;
-  --second-color: #e4d2ff;
-  --third-color: #ff128c;
-  --forth-color: #ffcf00;
-  --bg-color: #feefe5;
-  --font-color: #3a015c;
+  --first-color: 92, 235, 223; /* turquoise blue */
+  --second-color: 228, 210, 255; /* lavender blue */
+  --third-color: 255, 18, 140; /* magenta pink */
+  --forth-color: 255, 207, 0; /* cyber yellow */
+  --fifth-color: 255, 192, 159; /* peach crayola */
+  --sixth-color: 117, 181, 208; /* dark sky blue */
+  --bg-color: 254, 239, 229; /* linen */
+  --font-color: 58, 1, 92; /* russian violet */
 }
 
 body {
+  background-color: rgb(var(--bg-color));
+  color: rgb(var(--font-color));
   font-family: "Poppins", sans-serif;
-  background-color: var(--bg-color);
+}
+
+.navbar-bg {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .tff-logo {
   width: 120px;
 }
 
-.header-cover {
+.donation-link {
+  background-color: rgb(var(--forth-color));
+  font-weight: bold;
+}
+
+.donation-link:hover {
+  background-color: rgb(var(--font-color));
+  color: rgb(var(--forth-color));
+}
+
+.donation-link,
+.donation-link:hover {
+  border: 2px solid rgb(var(--forth-color));
+}
+
+/* .header-cover {
   position: absolute;
   top: 60px;
   width: 100%;
@@ -34,8 +56,12 @@ body {
   width: 50%;
 }
 
+.title-part {
+  color: rgb(var(--fifth-color));
+}
+
 .main-h2 {
-  color: var(--font-color);
+  color: rgb(var(--font-color));
   font-size: 30px;
   position: relative;
   left: 60px;
@@ -43,30 +69,58 @@ body {
   width: 45%;
 }
 
-.btn-donation {
-  background-color: var(--forth-color);
-  border: 2px solid var(--forth-color);
-  color: var(--font-color);  
-  padding: 5px 15px;
-  font-size: 15px;
-}
 
-.btn-donation:hover {
-  background-color: var(--font-color);
-  border: 2px solid var(--forth-color);
-  color: var(--forth-color);
-}
-
-.btn-donation-navbar {
-  display: flex;
-  /* justify-content: */
-}
 
 .btn-donation-header {
   font-size: 25px;
   position: relative;
   left: 60px;
   top: 140px;
+}
+
+.activity-container {
+  position: relative;
+  top: 450px;
+}
+
+.activity-card {
+  border: none;
+  border-radius: 80px 80px 5px 5px;
+  width: 160px;
+  height: 280px;
+}
+
+.activity-population {
+  background-color: rgb(var(--fifth-color), 0.5);
+}
+
+.activity-community {
+  background-color: rgb(var(--first-color), 0.4);
+}
+
+.activity-rehibilitation {
+  background-color: rgb(var(--third-color), 0.2);
+}
+
+.activity-education {
+  background-color: rgb(var(--font-color), 0.2);
+}
+
+.activity-collaborative {
+  background-color: rgb(var(--forth-color), 0.2);
+}
+
+.activity-img {
+  margin: 5px;
+  width: 150px;
+}
+
+.activity-card-title {
+  font-size: 18px;
+}
+
+.activity-link {
+  text-decoration: none;
 }
 
 @media (max-width: 630px) {
@@ -116,6 +170,10 @@ body {
 }
 
 @media (990px < width <= 1250px) {
+  .activity-container {
+    top: 300px;
+  }
+
   .main-h1 {
     font-size: 55px;
   }
@@ -127,4 +185,4 @@ body {
   .btn-donation-header {
     font-size: 20px;
   }
-}
+} */
