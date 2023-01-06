@@ -34,78 +34,160 @@ body {
   border: 2px solid rgb(var(--forth-color));
 }
 
+.donation-link:active {
+  background-color: rgb(var(--fifth-color)) !important;
+}
+
+.header-text {
+  margin: 0 auto;
+}
+
 .main-h1 {
   color: rgb(var(--third-color));
-  font-family: "Fredoka One", cursive;
-  position: relative;
-  text-shadow: -2px 2px black;
   font-size: 60px;
+  font-family: "Fredoka One", cursive;
+  position: absolute;
   left: 60px;
-  top: -550px;
+  top: 200px;
+  text-shadow: -2px 2px black;
   width: 60%;
 }
 
-.h1-important {
+.important-h1 {
   color: rgb(var(--fifth-color));
 }
 
 .main-h2 {
-  position: relative;
-  font-size: 30px;
+  font-size: 25px;
+  position: absolute;
   left: 60px;
-  top: -510px;
+  top: 390px;
   width: 55%;
 }
 
 .donation-link-header {
-  position: relative;
   font-size: 20px;
   padding: 10px 15px;
+  position: absolute;
   left: 60px;
-  top: -485px;
+  top: 495px;
 }
 
-@media (width <= 480px) {
+.who-container {
+  margin: 30px auto;
+  max-width: 90%;
+}
+
+.flex-center {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.who-pic {
+  border-radius: 140px 30px 240px;
+  max-height: 500px;
+  max-width: 100%;
+}
+
+.who-text-box {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--fifth-color)) 0%,
+    rgb(var(--second-color)) 100%
+  );
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.read-link {
+  color: rgb(96 166 237);
+  text-decoration: none;
+}
+
+.read-link:hover {
+  color: rgb(0 93 187);
+}
+
+@media (width <= 375px) {
+  .header-text {
+    text-align: center;
+  }
   .main-h1 {
     text-shadow: -1px 1px black;
     font-size: 18px;
-    left: 50px;
-    top: -120px;
-    width: 82%;
+    left: 0;
+    top: 90px;
+    width: 100%;
   }
   .main-h2 {
     font-size: 9px;
-    left: 50px;
-    top: -115px;
-    width: 82%;
+    left: 0;
+    top: 125px;
+    width: 100%;
   }
   .donation-link-header {
     font-size: 7px;
-    padding: 3px 7px;
-    left: 50px;
-    top: -120px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    left: 40%;
+    top: 160px;
+    width: 20%;
+  }
+}
+
+@media (375px < width <= 480px) {
+  .header-text {
+    text-align: center;
+  }
+  .main-h1 {
+    text-shadow: -1px 1px black;
+    font-size: 18px;
+    left: 0;
+    top: 90px;
+    width: 100%;
+  }
+  .main-h2 {
+    font-size: 9px;
+    left: 0;
+    top: 125px;
+    width: 100%;
+  }
+  .donation-link-header {
+    font-size: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    left: 40%;
+    top: 160px;
+    width: 20%;
   }
 }
 
 @media (480px < width <= 575px) {
+  .header-text {
+    text-align: center;
+  }
   .main-h1 {
     text-shadow: -1px 1px black;
     font-size: 23px;
-    left: 50px;
-    top: -175px;
-    width: 82%;
+    left: 0;
+    top: 95px;
+    width: 100%;
   }
   .main-h2 {
     font-size: 12px;
-    left: 50px;
-    top: -170px;
-    width: 82%;
+    left: 0;
+    top: 140px;
+    width: 100%;
   }
   .donation-link-header {
     font-size: 10px;
-    padding: 7px 12px;
-    left: 50px;
-    top: -170px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    left: 40%;
+    top: 180px;
+    width: 20%;
   }
 }
 
@@ -114,48 +196,48 @@ body {
     text-shadow: -1px 1px black;
     font-size: 30px;
     left: 50px;
-    top: -245px;
+    top: 125px;
   }
   .main-h2 {
     font-size: 15px;
     left: 50px;
-    top: -240px;
+    top: 210px;
   }
   .donation-link-header {
     font-size: 10px;
     padding: 7px 12px;
     left: 50px;
-    top: -230px;
+    top: 270px;
   }
 }
 
 @media (768px < width <= 1024px) {
   .main-h1 {
     font-size: 40px;
-    top: -325px;
+    top: 145px;
   }
   .main-h2 {
-    font-size: 20px;
-    top: -320px;
+    font-size: 18px;
+    top: 250px;
   }
   .donation-link-header {
     font-size: 15px;
-    top: -315px;
+    top: 325px;
   }
 }
 
 @media (1024px < width <= 1200px) {
   .main-h1 {
     font-size: 50px;
-    top: -450px;
+    top: 130px;
   }
   .main-h2 {
-    font-size: 25px;
-    top: -440px;
+    font-size: 20px;
+    top: 260px;
   }
   .donation-link-header {
     font-size: 18px;
-    top: -425px;
+    top: 345px;
   }
 }
 
