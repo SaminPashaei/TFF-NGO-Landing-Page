@@ -115,6 +115,52 @@ body {
   color: rgb(0 93 187);
 }
 
+.activity-container {
+  padding: 30px 0;
+  background-color: rgb(var(--second-color));
+}
+
+.activity-title {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.activity-card {
+  border: none;
+  border-radius: 80px 80px 5px 5px;
+  width: 160px;
+}
+
+.activity-population {
+  background-color: rgb(var(--fifth-color), 0.7);
+}
+
+.activity-community {
+  background-color: rgb(var(--first-color), 0.5);
+}
+
+.activity-rehibilitation {
+  background-color: rgb(var(--third-color), 0.3);
+}
+
+.activity-education {
+  background-color: rgb(var(--font-color), 0.4);
+}
+
+.activity-img {
+  margin: 5px;
+  width: 150px;
+}
+
+.activity-card-title {
+  font-size: 18px;
+  height: 80px;
+  margin: 0;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
 @media (width <= 375px) {
   .header-text {
     text-align: center;
@@ -245,59 +291,3 @@ body {
     top: 345px;
   }
 }
-
-/* 
-
-.btn-donation-header {
-  font-size: 25px;
-  position: relative;
-  left: 60px;
-  top: 140px;
-}
-
-.activity-container {
-  position: relative;
-  top: 450px;
-}
-
-.activity-card {
-  border: none;
-  border-radius: 80px 80px 5px 5px;
-  width: 160px;
-  height: 280px;
-}
-
-.activity-population {
-  background-color: rgb(var(--fifth-color), 0.5);
-}
-
-.activity-community {
-  background-color: rgb(var(--first-color), 0.4);
-}
-
-.activity-rehibilitation {
-  background-color: rgb(var(--third-color), 0.2);
-}
-
-.activity-education {
-  background-color: rgb(var(--font-color), 0.2);
-}
-
-.activity-collaborative {
-  background-color: rgb(var(--forth-color), 0.2);
-}
-
-.activity-img {
-  margin: 5px;
-  width: 150px;
-}
-
-.activity-card-title {
-  font-size: 18px;
-}
-
-.activity-link {
-  text-decoration: none;
-}
-
- */
