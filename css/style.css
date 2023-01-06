@@ -38,12 +38,8 @@ body {
   border: 2px solid rgb(var(--forth-color));
 }
 
-/* .header-cover {
-  position: absolute;
-  top: 60px;
-  width: 100%;
-}
 
+/* 
 .main-h1 {
   color: var(--third-color);
   font-family: "Fredoka One", cursive;
