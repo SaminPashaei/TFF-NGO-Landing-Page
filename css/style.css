@@ -101,6 +101,11 @@ body {
   padding: 30px;
 }
 
+.who-pic,
+.who-text-box {
+  box-shadow: 5px 5px 10px #a7a6a6;
+}
+
 .read-link {
   color: rgb(96 166 237);
   text-decoration: none;
