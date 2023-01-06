@@ -15,10 +15,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.navbar-bg {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
 .tff-logo {
   width: 120px;
 }
@@ -71,6 +67,7 @@ body {
 
 @media (width <= 480px) {
   .main-h1 {
+    text-shadow: -1px 1px black;
     font-size: 18px;
     left: 50px;
     top: -120px;
@@ -92,6 +89,7 @@ body {
 
 @media (480px < width <= 575px) {
   .main-h1 {
+    text-shadow: -1px 1px black;
     font-size: 23px;
     left: 50px;
     top: -175px;
@@ -113,6 +111,7 @@ body {
 
 @media (575px < width <= 768px) {
   .main-h1 {
+    text-shadow: -1px 1px black;
     font-size: 30px;
     left: 50px;
     top: -245px;
