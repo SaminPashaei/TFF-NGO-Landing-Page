@@ -69,7 +69,7 @@ body {
 
 /* ---------- Who We Are ---------- */
 .who-container {
-  margin: 30px auto;
+  margin: 30px auto 50px;
   max-width: 90%;
 }
 
@@ -135,27 +135,28 @@ body {
   border: none;
   border-radius: 80px 80px 5px 5px;
   box-shadow: 7px 7px 15px #a7a6a6;
+  height: 270px;
   min-width: 170px;
   max-width: 170px;
 }
 
-.activity-population {
+.activity-population-bg {
   background-color: #ffbe98;
 }
 
-.activity-community {
+.activity-community-bg {
   background-color: #81e8d4;
 }
 
-.activity-rehibilitation {
+.activity-rehibilitation-bg {
   background-color: #fba3b1;
 }
 
-.activity-education {
+.activity-education-bg {
   background-color: #87c9d0;
 }
 
-.activity-img {
+.activity-card-img {
   border: 4px solid rgb(var(--bg-color));
   border-radius: 50%;
   margin: 10px;
@@ -166,6 +167,31 @@ body {
   font-size: 18px;
   height: 80px;
   margin: 0;
+}
+
+.activity-info {
+  border-radius: 80px 80px 5px 5px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.activity-card:hover .activity-info {
+  height: 100%;
+}
+
+.activity-info-txt {
+  font-size: 18px;
+  height: 240px;
+  padding: 10px 23px;
+}
+
+.activity-info-link {
+  font-size: 18px;
+  height: 20px;
 }
 
 /* ---------- Responsive ---------- */
