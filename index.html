@@ -23,7 +23,8 @@
 </head>
 
 <body>
-  <nav class="navbar fixed-top bg-body-tertiary navbar-expand-lg img-fluid">
+  <!---------- Navbar ---------->
+  <nav class="navbar fixed-top bg-body-tertiary navbar-expand-lg">
     <div class="container-fluid px-5">
       <a class="navbar-brand me-4" href="/">
         <img src="/media/tff-logo.png" alt="TFF Logo" class="tff-logo">
@@ -51,6 +52,7 @@
     </div>
   </nav>
 
+  <!---------- Header Cover ---------->
   <img src="/media/header-cover-1.png" class="img-fluid d-none d-sm-block" />
   <img src="/media/header-cover-2.png" class="img-fluid d-block d-sm-none" />
 
@@ -67,6 +69,7 @@
     <a class="btn donation-link donation-link-header" href="#">Donate Now</a>
   </div>
 
+  <!---------- Who We Are ---------->
   <div class="who-container">
     <div class="row">
       <div class="col-sm-5 flex-center">
@@ -97,54 +100,56 @@
     </div>
   </div>
 
-  <div class="activity-container">
-    <div class="container">
-      <h2 class="activity-title">
-        Our Activities
-      </h2>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-6 my-4 flex-center">
-              <div class="card text-center activity-card activity-population">
-                <img src="/media/population.png" class="activity-img">
-                <span class="activity-more-info">
-                  <div class="card-body p-2 pt-0">
-                    <h5 class="card-title activity-card-title">Population monitoring and control</h5>
-                    <a href="#" class="read-link">Learn more »</a>
-                  </div>
-                </span>
-              </div>
-            </div>
-            <div class="col-6 my-4 flex-center">
-              <div class="card text-center activity-card activity-community">
-                <img src="/media/community.png" class="activity-img">
-                <div class="card-body p-2 pt-0">
-                  <h5 class="card-title activity-card-title">Community care</h5>
+  <!---------- Our Activity ---------->
+  <img src="/media/activity-cover.png" class="activity-cover">
+  <div class="container">
+    <h2 class="activity-main-title">
+      Our Activities
+    </h2>
+    <img src="/media/spreader-bar.png" class="spreader-bar">
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-6 my-4 flex-center">
+            <div class="card text-center activity-card activity-population">
+              <img src="/media/population.png" class="activity-img">
+                <div class="card-body p-3 pt-0">
+                  <h5 class="card-title flex-center activity-card-title">Population monitoring and control</h5>
                   <a href="#" class="read-link">Learn more »</a>
                 </div>
+            </div>
+          </div>
+          
+          <div class="col-6 my-4 flex-center">
+            <div class="card text-center activity-card activity-community">
+              <img src="/media/community.png" class="activity-img">
+              <div class="card-body p-3 pt-0">
+                <h5 class="card-title flex-center activity-card-title">Community care</h5>
+                <a href="#" class="read-link">Learn more »</a>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-6 my-4 flex-center">
-              <div class="card text-center activity-card activity-rehibilitation">
-                <img src="/media/rehibilitation.png" class="activity-img">
-                <div class="card-body p-2 pt-0">
-                  <h5 class="card-title activity-card-title">Rehabilitation and placement</h5>
-                  <a href="#" class="read-link">Learn more »</a>
-                </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-6 my-4 flex-center">
+            <div class="card text-center activity-card activity-rehibilitation">
+              <img src="/media/rehibilitation.png" class="activity-img">
+              <div class="card-body p-3 pt-0">
+                <h5 class="card-title flex-center activity-card-title">Rehabilitation and placement</h5>
+                <a href="#" class="read-link">Learn more »</a>
               </div>
             </div>
-            <div class="col-6 my-4 flex-center">
-              <div class="card text-center activity-card activity-education">
-                <img src="/media/education.png" class="activity-img">
-                <div class="card-body p-2 pt-0">
-                  <h5 class="card-title activity-card-title">Education and awareness</h5>
-                  <a href="#" class="read-link">Learn more »</a>
-                </div>
+          </div>
+          <div class="col-6 my-4 flex-center">
+            <div class="card text-center activity-card activity-education">
+              <img src="/media/education.png" class="activity-img">
+              <div class="card-body p-3 pt-0">
+                <h5 class="card-title flex-center activity-card-title">Education and awareness</h5>
+                <a href="#" class="read-link">Learn more »</a>
               </div>
             </div>
           </div>
@@ -152,58 +157,6 @@
       </div>
     </div>
   </div>
-
-  <!-- <div class="container activity-container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="row">
-          <div class="col-4">
-            
-          </div>
-          <div class="col-4">
-            <div class="card text-center activity-card activity-community">
-              <img src="/media/community.png" class="activity-img">
-              <div class="card-body px-2">
-                <h5 class="card-title activity-card-title">Community care</h5>
-                <a href="#" class="activity-link">Learn more »</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card text-center activity-card activity-rehibilitation">
-              <img src="/media/rehibilitation.png" class="activity-img">
-              <div class="card-body px-2">
-                <h5 class="card-title activity-card-title">Rehabilitation and placement</h5>
-                <a href="#" class="activity-link">Learn more »</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="row">
-          <div class="col-4">
-            <div class="card text-center activity-card activity-education">
-              <img src="/media/education.png" class="activity-img">
-              <div class="card-body px-2">
-                <h5 class="card-title activity-card-title">Education and awareness</h5>
-                <a href="#" class="activity-link">Learn more »</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card text-center activity-card activity-collaborative">
-              <img src="/media/collaborative.png" class="activity-img">
-              <div class="card-body px-2">
-                <h5 class="card-title activity-card-title">Collaborative efforts</h5>
-                <a href="#" class="activity-link">Learn more »</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
 </body>
 
 </html>
