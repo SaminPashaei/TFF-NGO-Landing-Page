@@ -45,13 +45,13 @@ function ourActivities() {
                             <h5 class="card-title flex-center activity-card-title">${activityType[inCol].title}</h5>
                           </div>
 
-                          <div class="activity-info activity-${activityType[inCol].name}-bg">
+                          <div class="activity-info-overlay activity-${activityType[inCol].name}-bg">
                             <div class="flex-center activity-info-txt">
                               ${activityType[inCol].info}
                             </div>
 
                             <div class="flex-center activity-info-link">
-                              <a href="#" class="read-link">Learn more »</a>
+                              <a href="#" class="more-link">Learn more »</a>
                             </div>
                           </div>
                         </div>
@@ -65,7 +65,7 @@ function ourActivities() {
   }
   activityHTML += `</div>`;
 
-  document.querySelector("#activity-container").innerHTML = activityHTML;
+  document.querySelector("#activity-card-container").innerHTML = activityHTML;
 }
 
 ourActivities();
