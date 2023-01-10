@@ -38,14 +38,14 @@ function ourActivities() {
     for (let inCol = startNum; inCol < startNum + 2; inCol++) {
       activityHTML += `
                       <div class="col-6 my-4 flex-center">
-                        <div class="card text-center activity-card activity-${activityType[inCol].name}-bg">
+                        <div class="card text-center activity-card activity-${activityType[inCol].name}">
                           <img src="/media/${activityType[inCol].name}.png" class="activity-card-img">
 
                           <div class="card-body p-3 pt-0 activity-card-body">
                             <h5 class="card-title flex-center activity-card-title">${activityType[inCol].title}</h5>
                           </div>
 
-                          <div class="activity-info-overlay activity-${activityType[inCol].name}-bg">
+                          <div class="activity-info-overlay activity-${activityType[inCol].name}">
                             <div class="flex-center activity-info-txt">
                               ${activityType[inCol].info}
                             </div>

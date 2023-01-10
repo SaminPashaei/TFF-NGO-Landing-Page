@@ -67,7 +67,7 @@ body {
   position: absolute;
   left: 60px;
   top: 200px;
-  text-shadow: -2px 2px #252525;
+  text-shadow: 0px 0px 5px #252525;
   width: 60%;
 }
 
@@ -104,14 +104,18 @@ body {
 }
 
 .who-text-box {
-  background: linear-gradient(135deg, #ffed9d 0%, #efbdeb 95%);
+  background: linear-gradient(
+    153deg,
+    rgb(142 238 228 / 94%) -20%,
+    rgb(216 168 204 / 94%) 95%
+  );
   border-radius: 10px;
   padding: 30px;
 }
 
 .who-pic,
 .who-text-box {
-  box-shadow: 5px 5px 10px #a7a6a6;
+  box-shadow: 5px 5px 20px 0px rgb(0 0 0 / 40%);
 }
 
 /* ---------- Our Activity ---------- */
@@ -139,26 +143,30 @@ body {
 .activity-card {
   border: none;
   border-radius: 80px 80px 5px 5px;
-  box-shadow: 7px 7px 15px #a7a6a6;
+  box-shadow: 5px 5px 20px 0px rgb(0 0 0 / 60%);
   height: 270px;
   min-width: 170px;
   max-width: 170px;
 }
 
-.activity-population-bg {
+.activity-population {
   background-color: #ffbe98;
+  border-bottom: 6px solid #e97737;
 }
 
-.activity-community-bg {
+.activity-community {
   background-color: #81e8d4;
+  border-bottom: 6px solid #43b39d;
 }
 
-.activity-rehibilitation-bg {
+.activity-rehibilitation {
   background-color: #fba3b1;
+  border-bottom: 6px solid #e93b57;
 }
 
-.activity-education-bg {
+.activity-education {
   background-color: #87c9d0;
+  border-bottom: 6px solid #3d7b81;
 }
 
 .activity-card-img {
@@ -175,6 +183,7 @@ body {
 }
 
 .activity-info-overlay {
+  border: none;
   border-radius: 80px 80px 5px 5px;
   overflow: hidden;
   position: absolute;
@@ -223,13 +232,16 @@ body {
 }
 
 .work-col-1 {
-  display: flex;
   width: 708px;
 }
 
 .work-col-2 {
-  display: flex;
   width: 472px;
+}
+
+.work-col-1,
+.work-col-2 {
+  display: flex;
 }
 
 .work-card {
@@ -238,12 +250,13 @@ body {
 }
 
 .work-card-body {
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
   padding: 0;
   transition: all 200ms ease-in-out;
 }
 
 .work-card-body:hover {
-  box-shadow: 5px 5px 12px #a7a6a6;
+  box-shadow: 5px 5px 17px rgb(0 0 0 / 40%);
 }
 
 .work-num-bg {
@@ -251,25 +264,25 @@ body {
 }
 
 .work-num {
-  background: radial-gradient(#ffffff -90%, #8e518d 70%);
+  background: radial-gradient(#ffffff -90%, #f86c68 70%);
   border-bottom-right-radius: 70px;
   color: #fff;
-  padding: 13px;
-  text-align: center;
   font-size: 25px;
   font-weight: bold;
+  padding: 13px;
+  text-align: center;
 }
 
 .work-title-bg {
-  background-color: #8e518d;
+  background-color: #f86c68;
 }
 
 .work-title {
   background-color: #fff;
-  text-align: center;
+  border-top-left-radius: 70px;
   font-size: 20px;
   padding: 13px;
-  border-top-left-radius: 70px;
+  text-align: center;
 }
 
 /* ---------- Responsive ---------- */
@@ -345,9 +358,6 @@ body {
 }
 
 @media (width < 768px) {
-  .main-h1 {
-    text-shadow: -1px 1px black;
-  }
   .activity-container {
     height: 750px;
   }
@@ -356,14 +366,14 @@ body {
     height: 750px;
     width: 100%;
   }
-  .work-card-container {
-    display: flex;
-    justify-content: center;
-  }
   .work-col-1,
   .work-col-2 {
     display: block;
     width: 100%;
+  }
+  .work-card-container {
+    display: flex;
+    justify-content: center;
   }
   .work-card-body {
     height: 145px;
@@ -371,10 +381,10 @@ body {
   .work-num,
   .work-title {
     display: flex;
-    height: 72.5px;
-    justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    height: 72.5px;
   }
 }
 
