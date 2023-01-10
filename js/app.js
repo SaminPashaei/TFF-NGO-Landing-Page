@@ -25,17 +25,18 @@ function ourActivities() {
   let activityHTML = `<div class="row">`;
 
   for (let outCol = 0; outCol < 2; outCol++) {
+    let inColStart;
     if (outCol === 0) {
-      startNum = 0;
+      inColStart = 0;
     } else {
-      startNum = 2;
+      inColStart = 2;
     }
 
     activityHTML += `
                       <div class="col-md-6">
                         <div class="row">
                     `;
-    for (let inCol = startNum; inCol < startNum + 2; inCol++) {
+    for (let inCol = inColStart; inCol < inColStart + 2; inCol++) {
       activityHTML += `
                       <div class="col-6 my-4 flex-center">
                         <div class="card text-center activity-card activity-${activityType[inCol].name}">
@@ -65,7 +66,89 @@ function ourActivities() {
   }
   activityHTML += `</div>`;
 
-  document.querySelector("#activity-card-container").innerHTML = activityHTML;
+  document.querySelector("#activity-container").innerHTML = activityHTML;
+}
+
+function ourWork() {
+  let workType = [
+    {
+      num: "800+",
+      title: "Medical Cases",
+      img: "cat-medical-cases",
+    },
+    {
+      num: "1500+",
+      title: "Vaccinations",
+      img: "cat-vaccinations",
+    },
+    {
+      num: "1500+",
+      title: "Sterlizations",
+      img: "cat-sterlizations",
+    },
+    {
+      num: "400+",
+      title: "Treat On Street",
+      img: "cat-treat-on-street",
+    },
+    {
+      num: "2400+",
+      title: "Cats Helped",
+      img: "cat-cats-helped",
+    },
+  ];
+  let workHTML = `<div class="row work-col-container">`;
+
+  for (let colNum = 0; colNum < 2; colNum++) {
+    workHTML += `<div class="col-md-6 work-col-${colNum + 1}">`;
+
+    let cardNumEnd, cardNumStart;
+    if (colNum === 0) {
+      cardNumStart = 0;
+      cardNumEnd = 3;
+    } else {
+      cardNumStart = 3;
+      cardNumEnd = 5;
+    }
+
+    for (let cardNum = cardNumStart; cardNum < cardNumEnd; cardNum++) {
+      workHTML += `<div class="work-card-container">`;
+
+      let cardWorkHTML = `
+                        <div class="card work-card">
+                          <div class="card-body card-img work-card-body">
+                            <div class="card-img-top work-num-bg">
+                              <div class="card-img-top work-num">
+                                ${workType[cardNum].num}
+                              </div>
+                            </div>
+                            <div class="card-img-bottom work-title-bg">
+                              <div class="card-img-bottom work-title">
+                                ${workType[cardNum].title}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      `;
+      let imgWorkHTML = `
+                      <div class="card work-card">
+                        <img src="/media/${workType[cardNum].img}.jpg" class="work-card-body card-img">
+                      </div>
+                    `;
+      if (cardNum % 2 === 0) {
+        workHTML += cardWorkHTML + imgWorkHTML;
+      } else {
+        workHTML += imgWorkHTML + cardWorkHTML;
+      }
+
+      workHTML += `</div>`;
+    }
+    workHTML += `</div>`;
+  }
+  workHTML += `</div>`;
+
+  document.querySelector("#work-container").innerHTML = workHTML;
 }
 
 ourActivities();
+ourWork();
