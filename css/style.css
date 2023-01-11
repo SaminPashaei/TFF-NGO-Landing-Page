@@ -13,7 +13,6 @@ body {
   background-color: #feefe5;
   color: #1c5c78;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 1000px;
 }
 
 .donation-link {
@@ -424,6 +423,17 @@ body {
   background-color: #1c5c78;
   border: 2px solid #1c5c78 !important;
   color: #fff;
+}
+
+/* ---------- Footer Note ---------- */
+.footer-container {
+  background-color: #ffed9d;
+  padding: 30px;
+}
+
+.footer-link {
+  font-size: 20px;
+  line-height: 2;
 }
 
 /* ---------- Responsive ---------- */
