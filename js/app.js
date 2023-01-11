@@ -66,7 +66,7 @@ function ourActivities() {
   }
   activityHTML += `</div>`;
 
-  document.querySelector("#activity-container").innerHTML = activityHTML;
+  document.querySelector("#activity-html-container").innerHTML = activityHTML;
 }
 
 function ourWork() {
@@ -147,7 +147,7 @@ function ourWork() {
   }
   workHTML += `</div>`;
 
-  document.querySelector("#work-container").innerHTML = workHTML;
+  document.querySelector("#work-html-container").innerHTML = workHTML;
 }
 
 ourActivities();
