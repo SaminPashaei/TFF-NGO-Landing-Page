@@ -194,8 +194,8 @@ function successStories() {
                             <h4 class="flex-center story-info-title">
                               ${catStory[inCol].name}
                             </h4>
-                            <div class="story-popup" onclick="storyPopup()">
-                              Read more
+                            <div class="story-popup">
+                              <span class="story-popup-read">Read more</span>
                               <span class="flex-center story-popup-txt">
                                 ${catStory[inCol].story}
                               </span>
@@ -216,12 +216,22 @@ function successStories() {
 }
 
 function storyPopup() {
-  var popup = document.querySelectorAll(".story-popup-txt");
-  for (let index = 0; index < popup.length; index++) {
-    popup[index].classList.toggle("show");
+  let popupRead = document.querySelectorAll(".story-popup-read");
+  let popupTxt = document.querySelectorAll(".story-popup-txt");
+
+  for (let index = 0; index < popupRead.length; index++) {
+    popupRead[index].addEventListener("click", function () {
+      if (popupRead[index].textContent === "Read more") {
+        popupRead[index].textContent = "Read less";
+      } else {
+        popupRead[index].textContent = "Read more";
+      }
+      popupTxt[index].classList.toggle("show");
+    });
   }
 }
 
 ourActivities();
 ourWork();
 successStories();
+storyPopup();
