@@ -169,7 +169,7 @@ function successStories() {
                     <div class="col-md-6">
                       <div class="row">
                   `;
-    
+
     for (let inCol = inColStart; inCol < inColStart + 2; inCol++) {
       storyHTML += `
                       <div class="col-6 my-4 flex-center">
