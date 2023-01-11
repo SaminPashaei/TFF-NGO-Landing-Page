@@ -177,33 +177,37 @@
   <!---------- Donation From ---------->
   <div class="donation-cover" id="donate-now">
     <div class="donation-container">
-      <form class="row g-3 donation-form">
+      <form class="row g-2 donation-form" id="donation-form">
         <h3>Donor Information</h3>
 
         <div class="col-12">
           <label class="form-label">First Name</label>
-          <input type="text" class="form-control donation-form-control" id="inputEmail4">
+          <input type="text" class="form-control donation-form-control" id="first-name-input">
+          <div class="donation-form-error" id="first-name-error"></div>
         </div>
 
         <div class="col-12">
           <label class="form-label">Last Name</label>
-          <input type="text" class="form-control donation-form-control" id="inputPassword4">
+          <input type="text" class="form-control donation-form-control" id="last-name-input">
+          <div class="donation-form-error" id="last-name-error"></div>
         </div>
 
         <div class="col-12">
           <label class="form-label">Email</label>
-          <input type="email" class="form-control donation-form-control" id="inputEmail4">
+          <input type="email" class="form-control donation-form-control" id="email-input">
+          <div class="donation-form-error" id="email-error"></div>
         </div>
 
         <div class="col-12">
           <label class="form-label">Program</label>
-          <select class="form-select donation-form-control">
-            <option selected>Select a program</option>
-            <option value="1" class="op1">General/All</option>
+          <select class="form-select donation-form-control" id="program-input">
+            <option value="0">Select a program</option>
+            <option value="1">General/All</option>
             <option value="2">Sterilization</option>
             <option value="3">Treatment and Rehabilitation</option>
             <option value="4">Community Involvement</option>
           </select>
+          <div class="donation-form-error" id="program-error"></div>
         </div>
 
         <div class="col-12">

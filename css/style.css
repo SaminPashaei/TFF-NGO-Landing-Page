@@ -447,6 +447,12 @@ body {
   color: #fff;
 }
 
+.donation-form-error {
+  color: #e93b57;
+  font-size: 12px;
+  min-height: 18px;
+}
+
 /* ---------- Footer Note ---------- */
 .footer-container {
   background-color: #ffed9d;

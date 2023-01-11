@@ -231,7 +231,101 @@ function storyPopup() {
   }
 }
 
+function donation() {
+  let donationForm = document.querySelector("#donation-form");
+  donationForm.addEventListener("submit", getDonorInfo);
+}
+
+function getDonorInfo(event) {
+  event.preventDefault();
+
+  // let inputList = [
+  //   {
+  //     id: "first-name",
+  //     name: "first name",
+  //   },
+  //   {
+  //     id: "last-name",
+  //     name: "last name",
+  //   },
+  //   {
+  //     id: "email",
+  //     name: "email",
+  //   },
+  //   {
+  //     id: "program",
+  //     name: "program",
+  //   },
+  // ];
+
+  let firstName = document
+    .querySelector("#first-name-input")
+    .value.trim()
+    .toLowerCase();
+  let lastName = document
+    .querySelector("#last-name-input")
+    .value.trim()
+    .toLowerCase();
+  let email = document.querySelector("#email-input").value.trim().toLowerCase();
+  let program = document.querySelector("#program-input");
+  let progaramValue = program.options[program.selectedIndex].value;
+
+  if (
+    firstName.length > 0 &&
+    lastName.length > 0 &&
+    email.length > 0 &&
+    progaramValue !== "0"
+  ) {
+    document.querySelector("#first-name-input").value = "";
+    document.querySelector("#last-name-input").value = "";
+    document.querySelector("#email-input").value = "";
+    document.querySelector("#program-input").selectedIndex = "0";
+    document.querySelector("#first-name-error").textContent = "";
+    document.querySelector("#last-name-error").textContent = "";
+    document.querySelector("#email-error").textContent = "";
+    document.querySelector("#program-error").textContent = "";
+    alert(
+      `Thank you ${capitalizing(firstName)} ${capitalizing(
+        lastName
+      )} for your interest in making life better for our little furry friends. We'll be in touch! 😺💖`
+    );
+  } else {
+    if (firstName.length === 0) {
+      let firstNameError = document.querySelector("#first-name-error");
+      firstNameError.innerHTML = "* Please enter your first name";
+    } else {
+      document.querySelector("#first-name-error").textContent = "";
+    }
+
+    if (lastName.length === 0) {
+      let lastNameError = document.querySelector("#last-name-error");
+      lastNameError.innerHTML = "* Please enter your last name";
+    } else {
+      document.querySelector("#last-name-error").textContent = "";
+    }
+
+    if (email.length === 0) {
+      let emailError = document.querySelector("#email-error");
+      emailError.innerHTML = "* Please enter your email";
+    } else {
+      document.querySelector("#email-error").textContent = "";
+    }
+
+    if (progaramValue === "0") {
+      let programError = document.querySelector("#program-error");
+      programError.innerHTML = "* Please select a program";
+    } else {
+      document.querySelector("#program-error").textContent = "";
+    }
+  }
+}
+
+function capitalizing(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
 ourActivities();
 ourWork();
 successStories();
 storyPopup();
+donation();
