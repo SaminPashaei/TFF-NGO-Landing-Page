@@ -13,7 +13,7 @@ body {
   background-color: #feefe5;
   color: #1c5c78;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 200px;
+  margin-bottom: 1000px;
 }
 
 .donation-link {
@@ -93,7 +93,7 @@ body {
 
 /* ---------- Who We Are ---------- */
 .who-container {
-  margin: 30px auto 50px;
+  margin: 15px auto;
   max-width: 90%;
 }
 
@@ -121,13 +121,14 @@ body {
 /* ---------- Our Activity ---------- */
 .activity-cover {
   position: absolute;
-  height: 480px;
+  height: 550px;
   width: 100%;
 }
 
 .activity-container {
-  height: 480px;
+  height: 550px;
   margin: 0 30px;
+  padding: 40px 0;
 }
 
 .activity-main-title {
@@ -305,13 +306,14 @@ body {
 /* ---------- Success Stories ---------- */
 .story-cover {
   position: absolute;
-  height: 480px;
+  height: 530px;
   width: 100%;
 }
 
 .story-container {
-  height: 480px;
+  height: 530px;
   margin: 0 30px;
+  padding: 40px 0;
 }
 
 .story-main-title {
@@ -374,6 +376,56 @@ body {
   text-align: center;
 }
 
+/* ---------- Donation From ---------- */
+.donation-cover {
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/259/original/donation-cover.jpg?1673412711);
+  background-position: center;
+  background-size: cover;
+  height: 550px;
+  width: 100%;
+}
+
+.donation-container {
+  background-color: rgb(179 179 179 / 50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 550px;
+  width: 100%;
+}
+
+.donation-form {
+  background-color: rgb(227 227 227 / 76%);
+  border-radius: 8px;
+  max-width: 40%;
+  margin: 20px;
+  padding: 16px;
+  position: absolute;
+  right: 0;
+}
+
+.donation-form-control:focus {
+  border-color: #8e518d;
+  box-shadow: 0 0 0 0.25rem rgb(142, 81, 141, 0.4);
+}
+
+.donate-btn {
+  background-color: #8e518d;
+  border: 2px solid #8e518d !important;
+  color: #fff;
+}
+
+.donate-btn:hover {
+  background-color: #d8a8cc;
+}
+
+.btn.donate-btn:active {
+  background-color: #1c5c78;
+  border: 2px solid #1c5c78 !important;
+  color: #fff;
+}
+
 /* ---------- Responsive ---------- */
 @media (width < 481px) {
   .main-h1 {
@@ -409,7 +461,7 @@ body {
   }
 }
 
-@media (width < 576px) {
+@media (width <= 575px) {
   .header-text {
     text-align: center;
   }
@@ -424,6 +476,10 @@ body {
   .donation-link-header {
     left: 40%;
     width: 20%;
+  }
+  .donation-form {
+    max-width: 60%;
+    right: auto;
   }
 }
 
@@ -447,13 +503,11 @@ body {
 }
 
 @media (width < 768px) {
-  .activity-cover,
-  .story-cover {
-    height: 820px;
+  .activity-cover {
+    height: 950px;
   }
-  .activity-container,
-  .story-container {
-    height: 820px;
+  .activity-container {
+    height: 950px;
   }
   .work-col-1,
   .work-col-2 {
@@ -474,6 +528,12 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     height: 72.5px;
+  }
+  .story-cover {
+    height: 820px;
+  }
+  .story-container {
+    height: 820px;
   }
 }
 
