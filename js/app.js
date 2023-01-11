@@ -36,6 +36,7 @@ function ourActivities() {
                       <div class="col-md-6">
                         <div class="row">
                     `;
+
     for (let inCol = inColStart; inCol < inColStart + 2; inCol++) {
       activityHTML += `
                       <div class="col-6 my-4 flex-center">
@@ -97,11 +98,10 @@ function ourWork() {
       img: "cat-cats-helped",
     },
   ];
+
   let workHTML = `<div class="row work-col-container">`;
 
   for (let colNum = 0; colNum < 2; colNum++) {
-    workHTML += `<div class="col-md-6 work-col-${colNum + 1}">`;
-
     let cardNumEnd, cardNumStart;
     if (colNum === 0) {
       cardNumStart = 0;
@@ -110,6 +110,8 @@ function ourWork() {
       cardNumStart = 3;
       cardNumEnd = 5;
     }
+
+    workHTML += `<div class="col-md-6 work-col-${colNum + 1}">`;
 
     for (let cardNum = cardNumStart; cardNum < cardNumEnd; cardNum++) {
       workHTML += `<div class="work-card-container">`;
@@ -135,12 +137,12 @@ function ourWork() {
                         <img src="/media/${workType[cardNum].img}.jpg" class="work-card-body card-img">
                       </div>
                     `;
+
       if (cardNum % 2 === 0) {
         workHTML += cardWorkHTML + imgWorkHTML;
       } else {
         workHTML += imgWorkHTML + cardWorkHTML;
       }
-
       workHTML += `</div>`;
     }
     workHTML += `</div>`;
@@ -150,5 +152,51 @@ function ourWork() {
   document.querySelector("#work-html-container").innerHTML = workHTML;
 }
 
+function successStories() {
+  let storyName = ["Kiba", "Gappu", "George", "Samosa"];
+
+  let storyHTML = `<div class="row">`;
+
+  for (let outCol = 0; outCol < 2; outCol++) {
+    let inColStart;
+    if (outCol === 0) {
+      inColStart = 0;
+    } else {
+      inColStart = 2;
+    }
+
+    storyHTML += `
+                    <div class="col-md-6">
+                      <div class="row">
+                  `;
+    
+    for (let inCol = inColStart; inCol < inColStart + 2; inCol++) {
+      storyHTML += `
+                      <div class="col-6 my-4 flex-center">
+                        <div class="card story-card">
+                          <img src="/media/${storyName[inCol]}.jpg" class="story-img">
+                          <div class="story-info-overlay">
+                            <h4 class="flex-center story-info-title">
+                              ${storyName[inCol]}
+                            </h4>
+                            <a href="#" class="more-link story-info-link">
+                              Read more »
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    `;
+    }
+    storyHTML += `
+                    </div>
+                  </div>
+                `;
+  }
+  storyHTML += `</div>`;
+
+  document.querySelector("#story-html-container").innerHTML = storyHTML;
+}
+
 ourActivities();
 ourWork();
+successStories();
