@@ -121,12 +121,12 @@ body {
 /* ---------- Our Activity ---------- */
 .activity-cover {
   position: absolute;
-  height: 420px;
+  height: 480px;
   width: 100%;
 }
 
 .activity-container {
-  height: 420px;
+  height: 480px;
   margin: 0 30px;
 }
 
@@ -138,6 +138,14 @@ body {
 
 .activity-spreader-bar {
   top: 7px;
+}
+
+.activity-paragraph {
+  font-size: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  top: 20px;
+  text-align: center;
 }
 
 .activity-card {
@@ -218,12 +226,21 @@ body {
 }
 
 .work-main-title {
-  margin-top: 18px;
+  position: relative;
+  top: 20px;
   text-align: center;
 }
 
 .work-spreader-bar {
-  top: -14px;
+  top: 7px;
+}
+
+.work-paragraph {
+  font-size: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  top: 20px;
+  text-align: center;
 }
 
 .work-col-container {
@@ -282,6 +299,38 @@ body {
   border-top-left-radius: 70px;
   font-size: 20px;
   padding: 13px;
+  text-align: center;
+}
+
+/* ---------- Success Stories ---------- */
+.story-cover {
+  position: absolute;
+  height: 420px;
+  width: 100%;
+}
+
+.story-container {
+  height: 420px;
+  margin: 0 30px;
+}
+
+.story-main-title {
+  color: #feefe5;
+  position: relative;
+  top: 20px;
+  text-align: center;
+}
+
+.story-spreader-bar {
+  top: 7px;
+}
+
+.story-paragraph {
+  color: #feefe5;
+  font-size: 20px;
+  margin-bottom: 30px;
+  position: relative;
+  top: 20px;
   text-align: center;
 }
 
@@ -359,11 +408,11 @@ body {
 
 @media (width < 768px) {
   .activity-container {
-    height: 750px;
+    height: 820px;
   }
   .activity-cover {
     position: absolute;
-    height: 750px;
+    height: 820px;
     width: 100%;
   }
   .work-col-1,
