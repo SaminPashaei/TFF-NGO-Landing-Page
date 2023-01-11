@@ -147,7 +147,28 @@ function ourWork() {
 }
 
 function successStories() {
-  let storyName = ["Kiba", "Gappu", "George", "Samosa"];
+  let catStory = [
+    {
+      name: "Kiba",
+      story:
+        "A staff member found this adorable cat near our office with a massive wound on his stomach and immediately brought him in for treatment. While he was recovering, Kiba acted as a good uncle to our young kittens. After Kiba's wound fully closed, he was sterilized and released back in his home territory to enjoy life as a healthy free cat, though he still visits now and then!",
+    },
+    {
+      name: "Gappu",
+      story:
+        "Gappu was found by one of our rescuers, Abaan. He had a huge wound on his neck that we did not know the cause of. Since the wound covered a large portion of his neck, it took several weeks to heal. As the staff dressed the wound every day, they very much took to his friendly nature. The day we released Gappu was a very happy and emotional one.",
+    },
+    {
+      name: "George",
+      story:
+        "George was found by a rescuer, Suman, in bad shape. He had a long cut on the side of his head as well as an abscess on his stomach, possibly from a fight with another male cat. Healing took even longer than usual because he would break out of his Elizabethan collar (plastic cone worn over the head) and irritate his wounds. It was all worth it because he now lives happily outdoors.",
+    },
+    {
+      name: "Samosa",
+      story:
+        "One of our volunteers found Samosa outside her residential area with a deep abrasion on his right foreleg. It was initially difficult to dress his wounds because he was scared of us and in discomfort. He soon warmed up to us and even started asking for pets. We fell in love with his huge cheeks (typical of males that are sterilized later in life). After treatment and sterilization, Samosa is enjoying life outdoors.",
+    },
+  ];
 
   let storyHTML = `<div class="row">`;
 
@@ -168,14 +189,17 @@ function successStories() {
       storyHTML += `
                       <div class="col-6 my-4 flex-center">
                         <div class="card story-card">
-                          <img src="/media/${storyName[inCol]}.jpg" class="story-img">
+                          <img src="/media/${catStory[inCol].name}.jpg" class="story-img">
                           <div class="story-info-overlay">
                             <h4 class="flex-center story-info-title">
-                              ${storyName[inCol]}
+                              ${catStory[inCol].name}
                             </h4>
-                            <a href="#" class="more-link story-info-link">
-                              Read more »
-                            </a>
+                            <div class="story-popup" onclick="storyPopup()">
+                              Read more
+                              <span class="flex-center story-popup-txt">
+                                ${catStory[inCol].story}
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -189,6 +213,13 @@ function successStories() {
   storyHTML += `</div>`;
 
   document.querySelector("#story-html-container").innerHTML = storyHTML;
+}
+
+function storyPopup() {
+  var popup = document.querySelectorAll(".story-popup-txt");
+  for (let index = 0; index < popup.length; index++) {
+    popup[index].classList.toggle("show");
+  }
 }
 
 ourActivities();

@@ -37,15 +37,6 @@ body {
   justify-content: center;
 }
 
-.more-link {
-  color: rgb(67 141 243);
-  text-decoration: none;
-}
-
-.more-link:hover {
-  color: rgb(0 82 165);
-}
-
 .spreader-bar {
   position: relative;
   left: 38%;
@@ -364,10 +355,47 @@ body {
   height: 70%;
 }
 
-.story-info-link {
+.story-popup {
+  color: rgb(67 141 243);
+  cursor: pointer;
   font-size: 20px;
   height: 30%;
   text-align: center;
+}
+
+.story-popup:hover {
+  color: rgb(0 82 165);
+}
+
+.story-popup .story-popup-txt {
+  visibility: hidden;
+  width: 360px;
+  background-color: rgb(85 85 85 / 80%);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: -258px;
+  left: 0;
+  margin-left: -80px;
+  font-size: 15px;
+  height: 250px;
+}
+
+.story-popup .story-popup-txt::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 49%;
+  margin-left: -5px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: transparent transparent rgb(85 85 85 / 80%) transparent;
+}
+
+.story-popup .show {
+  visibility: visible;
 }
 
 /* ---------- Donation From ---------- */
@@ -429,6 +457,15 @@ body {
 .footer-link {
   font-size: 20px;
   line-height: 2;
+}
+
+.footer-link a {
+  color: rgb(67 141 243);
+  text-decoration: none;
+}
+
+.footer-link a:hover {
+  color: rgb(0 82 165);
 }
 
 /* ---------- Responsive ---------- */
