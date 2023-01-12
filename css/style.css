@@ -151,9 +151,8 @@ body {
   border: none;
   border-radius: 80px 80px 5px 5px;
   box-shadow: 5px 5px 20px 0px rgb(0 0 0 / 60%);
-  height: 270px;
+  max-height: 270px;
   max-width: 170px;
-  min-width: 170px;
 }
 
 .activity-population {
@@ -180,7 +179,7 @@ body {
   border: 4px solid #feefe5;
   border-radius: 50%;
   margin: 10px;
-  width: 150px;
+  max-width: 150px;
 }
 
 .activity-card-title {
@@ -291,12 +290,12 @@ body {
 /* ---------- Success Stories ---------- */
 .story-cover {
   position: absolute;
-  height: 530px;
+  height: 480px;
   width: 100%;
 }
 
 .story-container {
-  height: 530px;
+  height: 480px;
   margin: 0 30px;
   padding: 40px 0;
 }
@@ -325,8 +324,8 @@ body {
   border: none;
   border-radius: 50%;
   box-shadow: 5px 5px 20px 0px rgb(0 0 0 / 60%);
-  max-width: 200px;
-  min-width: 200px;
+  max-width: 170px;
+  min-width: 170px;
 }
 
 .story-img {
@@ -376,7 +375,7 @@ body {
   font-size: 15px;
   padding: 10px;
   position: absolute;
-  top: 275px;
+  top: 235px;
   z-index: 1;
 }
 
@@ -386,7 +385,7 @@ body {
   border-style: solid;
   border-width: 9px;
   position: absolute;
-  left: 46%;
+  left: 45%;
   top: -18px;
 }
 
@@ -471,7 +470,25 @@ body {
 }
 
 /* ---------- Responsive ---------- */
-@media (width < 481px) {
+@media (width <= 375px) {
+  .activity-card-title,
+  .activity-info-overlay {
+    font-size: 15px;
+  }
+  .story-card {
+    max-width: 160px;
+    min-width: 160px;
+  }
+}
+
+@media (375px < width <= 480px) {
+  .activity-card-title,
+  .activity-info-overlay {
+    font-size: 17px;
+  }
+}
+
+@media (width <= 480px) {
   .main-h1 {
     font-size: 18px;
     top: 90px;
@@ -522,7 +539,7 @@ body {
     width: 20%;
   }
   .donation-form {
-    max-width: 60%;
+    max-width: 70%;
     right: auto;
   }
 }
@@ -547,11 +564,9 @@ body {
 }
 
 @media (width < 768px) {
-  .activity-cover {
-    height: 950px;
-  }
+  .activity-cover,
   .activity-container {
-    height: 950px;
+    height: 910px;
   }
   .work-col-1,
   .work-col-2 {
@@ -573,11 +588,9 @@ body {
     justify-content: center;
     height: 72.5px;
   }
-  .story-cover {
-    height: 820px;
-  }
+  .story-cover,
   .story-container {
-    height: 820px;
+    height: 780px;
   }
 }
 
