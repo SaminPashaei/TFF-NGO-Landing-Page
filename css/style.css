@@ -566,7 +566,7 @@ body {
 @media (width < 768px) {
   .activity-cover,
   .activity-container {
-    height: 910px;
+    height: 930px;
   }
   .work-col-1,
   .work-col-2 {
