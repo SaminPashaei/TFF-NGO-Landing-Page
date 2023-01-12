@@ -195,7 +195,7 @@ function successStories() {
                               ${catStory[inCol].name}
                             </h4>
                             <div class="story-popup">
-                              <span class="story-popup-read">Read more</span>
+                              <span class="story-popup-read">Show more</span>
                               <span class="flex-center story-popup-txt">
                                 ${catStory[inCol].story}
                               </span>
@@ -221,10 +221,10 @@ function storyPopup() {
 
   for (let index = 0; index < popupRead.length; index++) {
     popupRead[index].addEventListener("click", function () {
-      if (popupRead[index].textContent === "Read more") {
-        popupRead[index].textContent = "Read less";
+      if (popupRead[index].textContent === "Show more") {
+        popupRead[index].textContent = "Show less";
       } else {
-        popupRead[index].textContent = "Read more";
+        popupRead[index].textContent = "Show more";
       }
       popupTxt[index].classList.toggle("show");
     });

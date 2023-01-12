@@ -152,8 +152,8 @@ body {
   border-radius: 80px 80px 5px 5px;
   box-shadow: 5px 5px 20px 0px rgb(0 0 0 / 60%);
   height: 270px;
-  min-width: 170px;
   max-width: 170px;
+  min-width: 170px;
 }
 
 .activity-population {
@@ -325,7 +325,8 @@ body {
   border: none;
   border-radius: 50%;
   box-shadow: 5px 5px 20px 0px rgb(0 0 0 / 60%);
-  width: 200px;
+  max-width: 200px;
+  min-width: 200px;
 }
 
 .story-img {
@@ -373,14 +374,10 @@ body {
   visibility: hidden;
   color: #fff;
   font-size: 15px;
-  margin-left: -80px;
   padding: 10px;
   position: absolute;
-  bottom: -258px;
-  left: 0;
+  top: 275px;
   z-index: 1;
-  height: 250px;
-  width: 360px;
 }
 
 .story-popup .story-popup-txt::before {
@@ -389,7 +386,7 @@ body {
   border-style: solid;
   border-width: 9px;
   position: absolute;
-  left: 48%;
+  left: 46%;
   top: -18px;
 }
 
