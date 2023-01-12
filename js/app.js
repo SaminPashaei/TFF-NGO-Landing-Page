@@ -231,93 +231,90 @@ function storyPopup() {
   }
 }
 
-function donation() {
-  let donationForm = document.querySelector("#donation-form");
-  donationForm.addEventListener("submit", getDonorInfo);
+function donationForm() {
+  document
+    .querySelector("#donation-form")
+    .addEventListener("submit", getDonorInfo);
 }
 
 function getDonorInfo(event) {
   event.preventDefault();
 
-  // let inputList = [
-  //   {
-  //     id: "first-name",
-  //     name: "first name",
-  //   },
-  //   {
-  //     id: "last-name",
-  //     name: "last name",
-  //   },
-  //   {
-  //     id: "email",
-  //     name: "email",
-  //   },
-  //   {
-  //     id: "program",
-  //     name: "program",
-  //   },
-  // ];
+  let inputList = [
+    {
+      id: "first-name",
+    },
+    {
+      id: "last-name",
+    },
+    {
+      id: "email",
+    },
+    {
+      id: "program",
+    },
+  ];
 
-  let firstName = document
-    .querySelector("#first-name-input")
-    .value.trim()
-    .toLowerCase();
-  let lastName = document
-    .querySelector("#last-name-input")
-    .value.trim()
-    .toLowerCase();
-  let email = document.querySelector("#email-input").value.trim().toLowerCase();
-  let program = document.querySelector("#program-input");
-  let progaramValue = program.options[program.selectedIndex].value;
-
-  if (
-    firstName.length > 0 &&
-    lastName.length > 0 &&
-    email.length > 0 &&
-    progaramValue !== "0"
-  ) {
-    document.querySelector("#first-name-input").value = "";
-    document.querySelector("#last-name-input").value = "";
-    document.querySelector("#email-input").value = "";
-    document.querySelector("#program-input").selectedIndex = "0";
-    document.querySelector("#first-name-error").textContent = "";
-    document.querySelector("#last-name-error").textContent = "";
-    document.querySelector("#email-error").textContent = "";
-    document.querySelector("#program-error").textContent = "";
-    alert(
-      `Thank you ${capitalizing(firstName)} ${capitalizing(
-        lastName
-      )} for your interest in making life better for our little furry friends. We'll be in touch! 😺💖`
+  for (let index = 0; index < 4; index++) {
+    inputList[index].main = document.getElementById(
+      `${inputList[index].id}-input`
     );
-  } else {
-    if (firstName.length === 0) {
-      let firstNameError = document.querySelector("#first-name-error");
-      firstNameError.innerHTML = "* Please enter your first name";
+
+    inputList[index].error = document.getElementById(
+      `${inputList[index].id}-error`
+    );
+
+    if (index < 3) {
+      inputList[index].value = inputList[index].main.value.trim().toLowerCase();
     } else {
-      document.querySelector("#first-name-error").textContent = "";
+      inputList[index].value =
+        inputList[index].main.options[
+          inputList[index].main.selectedIndex
+        ].value;
     }
 
-    if (lastName.length === 0) {
-      let lastNameError = document.querySelector("#last-name-error");
-      lastNameError.innerHTML = "* Please enter your last name";
+    if (inputList[index].value.length === 0) {
+      inputList[index].error.innerHTML = `* Please enter your ${removeHyphen(
+        inputList[index].id
+      )}`;
+      inputList[index].complete = false;
+    } else if (inputList[index].value === "0" && index === 3) {
+      inputList[index].error.innerHTML = `* Please select a program.`;
+      inputList[index].complete = false;
     } else {
-      document.querySelector("#last-name-error").textContent = "";
-    }
-
-    if (email.length === 0) {
-      let emailError = document.querySelector("#email-error");
-      emailError.innerHTML = "* Please enter your email";
-    } else {
-      document.querySelector("#email-error").textContent = "";
-    }
-
-    if (progaramValue === "0") {
-      let programError = document.querySelector("#program-error");
-      programError.innerHTML = "* Please select a program";
-    } else {
-      document.querySelector("#program-error").textContent = "";
+      inputList[index].error.textContent = "";
+      inputList[index].complete = true;
     }
   }
+
+  if (inputList[0].complete) {
+    let formComplete = true;
+    for (let index = 1; index < 4; index++) {
+      if (inputList[index - 1].complete !== inputList[index].complete) {
+        formComplete = false;
+        break;
+      }
+    }
+
+    if (formComplete) {
+      for (let index = 0; index < 4; index++) {
+        if (index < 3) {
+          inputList[index].main.value = "";
+        } else {
+          inputList[index].main.selectedIndex = "0";
+        }
+      }
+      alert(
+        `Thank you ${capitalizing(inputList[0].value)} ${capitalizing(
+          inputList[1].value
+        )} for your interest in making life better for our little furry friends. We'll be in touch! 😺💖`
+      );
+    }
+  }
+}
+
+function removeHyphen(word) {
+  return word.replace(/-/g, " ");
 }
 
 function capitalizing(word) {
@@ -328,4 +325,4 @@ ourActivities();
 ourWork();
 successStories();
 storyPopup();
-donation();
+donationForm();
