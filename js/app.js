@@ -311,7 +311,7 @@ function getDonorInfo(event) {
       alert(
         `Thank you ${capitalizing(inputList[0].value)} ${capitalizing(
           inputList[1].value
-        )} for your interest in making life better for our little furry friends. We'll be in touch! 😺💖`
+        )} for your interest in making a better life for our little furry friends. We'll be in touch! 😺💖`
       );
     }
   }
