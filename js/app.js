@@ -2,21 +2,25 @@ function ourActivities() {
   let activityType = [
     {
       name: "population",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/489/original/population.png?1673540467",
       title: "Population monitoring and control",
       info: "Sterilizing healthy stray cats area by area to prevent population growth",
     },
     {
       name: "community",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/490/original/community.png?1673540481",
       title: "Community care",
       info: "Teaching community members to feed, treat and sterilize stray cats in their area",
     },
     {
       name: "rehibilitation",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/491/original/rehibilitation.png?1673540493",
       title: "Rehabilitation and placement",
       info: "Providing medical care to sick and injured stray cats, seeking homes for disadvantaged cats",
     },
     {
       name: "education",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/492/original/education.png?1673540504",
       title: "Education and awareness",
       info: "Improving the public perception of stray cats through educational campaigns",
     },
@@ -33,15 +37,15 @@ function ourActivities() {
     }
 
     activityHTML += `
-                      <div class="col-md-6">
-                        <div class="row">
+                    <div class="col-md-6">
+                      <div class="row">
                     `;
 
     for (let inCol = inColStart; inCol < inColStart + 2; inCol++) {
       activityHTML += `
                       <div class="col-6 my-4 flex-center">
                         <div class="card text-center activity-card activity-${activityType[inCol].name}">
-                          <img src="/media/${activityType[inCol].name}.png" class="activity-card-img">
+                          <img src="${activityType[inCol].url}" class="activity-card-img">
 
                           <div class="card-body p-3 pt-0">
                             <h5 class="card-title flex-center activity-card-title">${activityType[inCol].title}</h5>
@@ -69,31 +73,31 @@ function ourWork() {
     {
       num: "800+",
       title: "Medical Cases",
-      img: "cat-medical-cases",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/493/original/cat-medical-cases.jpg?1673540548",
     },
     {
       num: "1500+",
       title: "Vaccinations",
-      img: "cat-vaccinations",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/494/original/cat-vaccinations.jpg?1673540615",
     },
     {
       num: "1500+",
       title: "Sterlizations",
-      img: "cat-sterlizations",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/495/original/cat-sterlizations.jpg?1673540638",
     },
     {
       num: "400+",
       title: "Treat On Street",
-      img: "cat-treat-on-street",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/499/original/cat-treat-on-street.jpg?1673541112",
     },
     {
       num: "2400+",
       title: "Cats Helped",
-      img: "cat-cats-helped",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/500/original/cat-cats-helped.jpg?1673541126",
     },
   ];
 
-  let workHTML = `<div class="row work-col-container">`;
+  let workHTML = `<div class="row flex-center">`;
 
   for (let colNum = 0; colNum < 2; colNum++) {
     let cardNumEnd, cardNumStart;
@@ -104,12 +108,10 @@ function ourWork() {
       cardNumStart = 3;
       cardNumEnd = 5;
     }
-
     workHTML += `<div class="col-md-6 work-col-${colNum + 1}">`;
 
     for (let cardNum = cardNumStart; cardNum < cardNumEnd; cardNum++) {
       workHTML += `<div class="work-card-container">`;
-
       let cardWorkHTML = `
                         <div class="card work-card">
                           <div class="card-body card-img work-card-body">
@@ -128,10 +130,9 @@ function ourWork() {
                       `;
       let imgWorkHTML = `
                       <div class="card work-card">
-                        <img src="/media/${workType[cardNum].img}.jpg" class="work-card-body card-img">
+                        <img src="${workType[cardNum].url}" class="work-card-body card-img">
                       </div>
                     `;
-
       if (cardNum % 2 === 0) {
         workHTML += cardWorkHTML + imgWorkHTML;
       } else {
@@ -152,21 +153,25 @@ function successStories() {
       name: "Kiba",
       story:
         "A staff member found this adorable cat near our office with a massive wound on his stomach and immediately brought him in for treatment. While he was recovering, Kiba acted as a good uncle to our young kittens. After Kiba's wound fully closed, he was sterilized and released back in his home territory to enjoy life as a healthy free cat, though he still visits now and then!",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/502/original/kiba.jpg?1673541297",
     },
     {
       name: "Gappu",
       story:
         "Gappu was found by one of our rescuers, Abaan. He had a huge wound on his neck that we did not know the cause of. Since the wound covered a large portion of his neck, it took several weeks to heal. As the staff dressed the wound every day, they very much took to his friendly nature. The day we released Gappu was a very happy and emotional one.",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/503/original/gappu.jpg?1673541375",
     },
     {
       name: "George",
       story:
         "George was found by a rescuer, Suman, in bad shape. He had a long cut on the side of his head as well as an abscess on his stomach, possibly from a fight with another male cat. Healing took even longer than usual because he would break out of his Elizabethan collar (plastic cone worn over the head) and irritate his wounds. It was all worth it because he now lives happily outdoors.",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/504/original/george.jpg?1673541390",
     },
     {
       name: "Samosa",
       story:
         "One of our volunteers found Samosa outside her residential area with a deep abrasion on his right foreleg. It was initially difficult to dress his wounds because he was scared of us and in discomfort. He soon warmed up to us and even started asking for pets. We fell in love with his huge cheeks (typical of males that are sterilized later in life). After treatment and sterilization, Samosa is enjoying life outdoors.",
+      url: "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/062/505/original/samosa.jpg?1673541416",
     },
   ];
 
@@ -184,18 +189,17 @@ function successStories() {
                     <div class="col-md-6">
                       <div class="row">
                   `;
-
     for (let inCol = inColStart; inCol < inColStart + 2; inCol++) {
       storyHTML += `
                       <div class="col-6 my-4 flex-center">
                         <div class="card story-card">
-                          <img src="/media/${catStory[inCol].name}.jpg" class="story-img">
+                          <img src="${catStory[inCol].url}" class="story-img">
                           <div class="story-info-overlay">
                             <h4 class="flex-center story-info-title">
                               ${catStory[inCol].name}
                             </h4>
                             <div class="story-popup">
-                              <span class="story-popup-read">Show more</span>
+                              <span class="story-popup-more">Show more</span>
                               <span class="flex-center story-popup-txt">
                                 ${catStory[inCol].story}
                               </span>
@@ -216,7 +220,7 @@ function successStories() {
 }
 
 function storyPopup() {
-  let popupRead = document.querySelectorAll(".story-popup-read");
+  let popupRead = document.querySelectorAll(".story-popup-more");
   let popupTxt = document.querySelectorAll(".story-popup-txt");
 
   for (let index = 0; index < popupRead.length; index++) {
